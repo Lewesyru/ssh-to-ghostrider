@@ -36,13 +36,17 @@ The configuration file is saved on `ghostrider: /home/share` folder. All the ope
 
 	* Hit `return`, when it prompts you for password, type the password you used to login your Mac. Noted that your password will NOT show up as `***` here, keep typing then press `return`.
 	* If the script finished without `Permission denied`, then it means that `ghostrider` was added to your hostname list. 
+	
+* **For Linux:**
+	* You know how to do it, don't you? ; )
 ---- 
 
 #### Step 2: Server Side
 Now the `ghostrider` is added to your hosts list, we can connect it with its hostname through `ssh`. (If you have skipped *Step 1*, use `140.232.230.73` instead of `ghostrider` below.) Currently both Windows and Mac are shipped with `ssh` function. Most of the Linux distributions will also have `ssh` pre-installed. 
 * For **Windows** users, please use either Command Prompt or Windows PowerShell to connect `ghostrider`. (Personally I prefer PowerShell)
 * For **Mac** and **GUI Linux** users, please use the Terminal. 
-I will use macOS screenshot to illustrate, all the commands are the same on all OS.
+
+	I will use macOS screenshot to illustrate, all the commands are the same on all OS.
 
 * **Connect to ghostrider**
 	* After opening your Terminal/PowerShell, type:
