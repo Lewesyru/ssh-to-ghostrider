@@ -1,4 +1,4 @@
-# SSH Access Installation Guides
+# SSH Access Setup Guides
 ###### Yi Ru, March 15, 2019
 
 ## Introduction
