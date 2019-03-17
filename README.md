@@ -15,7 +15,7 @@ The first step is add `ghostrider` to your hostname list on your computer. **Thi
 
 The configuration file is saved on `ghostrider: /home/share` folder. All the operations require your device to be connected to the Clark network. (i.e., connected to Clark WiFi or Clark VPN)
 
-* **For Windows: **
+* **For Windows:**
 	* Open a File Explorer, type `\\140.232.230.73` in the address bar, press Enter.
 	![](pic/1.png)
 
@@ -65,9 +65,9 @@ I will use macOS screenshot to illustrate, all the commands are the same on all 
 * **Setup Jupyter Notebook for remote access**
 	* Now type the following command to run the Jupyter configuration file:
 	```bash
-		cd ~/../share
-		python3 ./run.pyc
-		```
+	cd ~/../share
+	python3 ./run.pyc
+	```
 	* Please follow the instructions to go through the setup. You will be asked to select a port number. When finished, your Jupyter Notebook should be all set.
 	* Now you can type `jupyter notebook` in your Terminal to start it. Then open your favorite web browser, open `http://ghostrider:your port #`, ignore the password prompt (the script has set it up for you) and click Login, and you are all set!
 ---- 
