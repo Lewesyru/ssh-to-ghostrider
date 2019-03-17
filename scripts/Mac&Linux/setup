@@ -3,8 +3,12 @@ clear
 echo Script created by Yi Ru.
 echo
 echo Start writing file...
-echo >> /etc/hosts
-echo 140.232.230.73		ghostrider>> /etc/hosts
-echo
-echo If it prompts Permission denied, please run again as sudoer.
-echo
+{
+	echo >> /etc/hosts &&
+	echo 140.232.230.73		ghostrider>> /etc/hosts &&
+	printf "\e[1;32m Done. You can close this window now.\n\e[0m"
+	} || {
+	echo
+	printf "\e[1;31m Permission denied. Please run again as sudoer. \e[0m"
+	echo
+}
