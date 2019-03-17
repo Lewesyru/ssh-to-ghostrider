@@ -1,0 +1,10 @@
+#!/bin/sh
+clear
+echo Script created by Yi Ru.
+echo
+echo Start writing file...
+echo >> /etc/hosts
+echo 140.232.230.73		ghostrider>> /etc/hosts
+echo
+echo If it prompts Permission denied, please run again as sudoer.
+echo
