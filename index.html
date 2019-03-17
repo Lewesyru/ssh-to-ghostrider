@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>SSH Access Installation Guides</title>
+	</head>
+<body>
+<h1>SSH Access Installation Guides</h1>
+
+<h6>Yi Ru, March 15, 2019</h6>
+
+<h2>Introduction</h2>
+
+<p>Lambda workstation (<code>ghostrider</code>) provides an efficient and high-performance solution for running deep learning code. It is also provides a Remote Desktop Protocol (RDP) for an easy-to-use remote access. However, using RDP will consume many CPU/GPU and RAM resources on <code>ghostrider</code>. Besides, if your connection with <code>ghostrider</code> is via Clark VPN, the response from ghostrider sometimes will be very “laggy” or even have no response at all. So, using Secure Shell (<code>ssh</code>) could be an ideal way to access <code>ghostrider</code> remotely. <code>ssh</code> can let you control the machine not only save computing resources, but also avoid the “laggy” situations. </p>
+
+<p><code>ssh</code> is a secure connection to server’s shell. It provides a command line control interface (the shell) to the server (i.e. <code>ghostrider</code>). There is no GUI at all, only command lines. And that’s the reason why using SSH can save our valuable computing resources. </p>
+
+<p>This manual will guide you through the SSH access installation with only a few steps. After setting everything up, you can use Jupyter Notebook on your own device, but running your code on <code>ghostrider</code>. (<em>Even if Jupyter Notebook is not installed on your device!</em>)</p>
+
+<p>Now let’s get started.</p>
+
+<h2>Installation</h2>
+
+<h4>Step 1: Client Side</h4>
+
+<p>The first step is add <code>ghostrider</code> to your hostname list on your computer. <strong>This operation is requiring administrator access or sudo permission</strong>. However, you can skip this step if you prefer using IP address to connect, or you don’t have the permission to modify system file. </p>
+
+<p>The configuration file is saved on <code>ghostrider: /home/share</code> folder. All the operations require your device to be connected to the Clark network. (i.e., connected to Clark WiFi or Clark VPN)</p>
+
+<ul>
+	<li><strong>For Windows: </strong>
+
+		<ul>
+			<li>Open a File Explorer, type <code>\\140.232.230.73</code> in the address bar, press Enter.</li>
+		</ul>
+
+		<figure><img src="pic/1.png"/></figure>
+
+		<ul>
+			<li>A window will pop-up asking for your credentials. Now type your username and password on <code>ghostrider</code>. </li>
+			<li>You will see a Folder name <code>home on Lambda</code>, open it and navigate to <code>share</code> folder.</li>
+			<li>Open <code>Windows</code> folder in <code>share</code>, right click on <code>setup.bat</code> and select <code>Run as administrator</code>. Click Yes when UAC window prompt.</li>
+		</ul>
+
+		<figure><img src="pic/2.png"/></figure>
+
+		<ul>
+			<li>If the script finished without <code>Access is denied.</code>, then it means that <code>ghostrider</code> was added to your hostname list. <br/><br/></li>
+		</ul></li>
+	<li><strong>For Mac:</strong>
+
+		<ul>
+			<li>Open a Finder window, press <code>⌘ + K</code> and type <code>smb://140.232.230.73</code> in Server Address. </li>
+		</ul>
+
+		<figure><img src="pic/mac1.png" width="800"/></figure>
+
+		<ul>
+			<li>Then type in your credentials for <code>ghostrider</code>. If it prompts you to select volumes, select<code>home on Lambda</code> and click OK.</li>
+			<li>Navigate to <code>home on Lambda/share/Mac&amp;Linux</code>, and you will see a executable file named <code>setup</code>.</li>
+			<li>Open a terminal window, type in<code>sudo </code> (’sudo’ and a space), then drag the setup file into the terminal, then it will show up like this:</li>
+		</ul>
+
+		<figure><img src="pic/mac2.png" width="800"/></figure>
+
+		<ul>
+			<li>Hit <code>return</code>, when it prompts you for password, type the password you used to login your Mac. Noted that your password will NOT show up as <code>***</code> here, keep typing then press <code>return</code>.</li>
+			<li>If the script finished without <code>Permission denied</code>, then it means that <code>ghostrider</code> was added to your hostname list. </li>
+		</ul></li>
+</ul>
+
+<hr />
+
+<h4>Step 2: Server Side</h4>
+
+<p>Now the <code>ghostrider</code> is added to your hosts list, we can connect it with its hostname through <code>ssh</code>. (If you have skipped <em>Step 1</em>, use <code>140.232.230.73</code> instead of <code>ghostrider</code> below.) Currently both Windows and Mac are shipped with <code>ssh</code> function. Most of the Linux distributions will also have <code>ssh</code> pre-installed. </p>
+
+<ul>
+	<li>For <strong>Windows</strong> users, please use either Command Prompt or Windows PowerShell to connect <code>ghostrider</code>. (Personally I prefer PowerShell)</li>
+	<li>For <strong>Mac</strong> and <strong>GUI Linux</strong> users, please use the Terminal. </li>
+</ul>
+
+<p>I will use macOS screenshot to illustrate, all the commands are the same on all OS.</p>
+
+<ul>
+	<li><strong>Connect to ghostrider</strong>
+
+		<ul>
+			<li>After opening your Terminal/PowerShell, type:
+
+<pre><code class="code-highlighted code-js"><span class="syntax-all syntax-parameter">ssh</span> <span class="syntax-all syntax-keyword">&lt;</span><span class="syntax-all syntax-parameter">username</span><span class="syntax-all syntax-keyword">&gt;</span>@<span class="syntax-all syntax-tag">ghostrider</span></code></pre>
+
+				<ul>
+					<li>Change <code>&lt;username&gt;</code> to your username on ghostrider, then press enter.</li>
+				</ul></li>
+			<li>When it is the first time you connect to ghostrider, it will prompt:
+
+<pre><code>The authenticity of host &#39;ghostrider (140.232.230.73)&#39; can&#39;t be established. 
+ECDSA key fingerprint is SHA256:A-very-long-string-and-totally-nonsense.
+Are you sure you want to continue connecting (yes/no)? yes</code></pre>
+
+				<ul>
+					<li>Please Type yes and press enter.</li>
+				</ul></li>
+			<li>Then you will be asked for password, type in your password for accessing <code>ghostrider</code>. </li>
+			<li>Now, you are logged into <code>ghostrider</code> via <code>ssh</code>. Your terminal will look very similar to this:
+
+				<figure><img src="pic/mac3.png" width="800"/></figure></li>
+			<li> Don’t close this window, we will proceed to the next step. <br/><br/></li>
+		</ul></li>
+	<li><strong>Setup Jupyter Notebook for remote access</strong>
+
+		<ul>
+			<li>Now type the following command to run the Jupyter configuration file:</li>
+<li><pre><code class="code-highlighted code-bash"><span class="syntax-all syntax-constant">cd</span> <span class="syntax-all syntax-keyword">~</span>/../share
+python3 ./run.pyc</code></pre></li>
+			<li>Please follow the instructions to go through the setup. You will be asked to select a port number. When finished, your Jupyter Notebook should be all set.</li>
+			<li>Now you can type <code>jupyter notebook</code> in your Terminal to start it. Then open your favorite web browser, open <code>http://ghostrider:your port #</code>, ignore the password prompt (the script has set it up for you) and click Login, and you are all set!</li>
+		</ul></li>
+</ul>
+
+<hr />
+
+<h2>Extra: share drive on ghostrider</h2>
+
+<p>You might notice that the ghostrider has a share drive function just like how you access <code>\\sandy</code>. And yes, after this setup you can access it or map this network drive to your computer simply with <code>\\ghostrider</code> or <code>\\ghostrider\home on Lambda</code>. (For Mac and Linux is <code>smb://ghostrider</code>, <code>smb://ghostrider/home on Lambda</code>)</p>
+
+<p>Noted that you will have permission to Read &amp; Write <strong>ONLY</strong> to your own folder and <code>share</code> folder. You can read others folder but you don’t have permission to write.</p>
+
+</body>
+</html>
+
