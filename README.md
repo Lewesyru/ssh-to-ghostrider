@@ -28,11 +28,11 @@ The configuration file is saved on `ghostrider: /home/share` folder. All the ope
 
 * **For Mac:**
 	* Open a Finder window, press `⌘ + K` and type `smb://140.232.230.73` in Server Address. 
-	![](pic/mac1.png width=800)
+	![](pic/mac1.png)
 	* Then type in your credentials for `ghostrider`. If it prompts you to select volumes, select`home on Lambda` and click OK.
 	* Navigate to `home on Lambda/share/Mac&Linux`, and you will see a executable file named `setup`.
 	* Open a terminal window, type in`sudo ` (’sudo’ and a space), then drag the setup file into the terminal, then it will show up like this:
-	![](pic/mac2.png width=800)
+	![](pic/mac2.png)
 
 	* Hit `return`, when it prompts you for password, type the password you used to login your Mac. Noted that your password will NOT show up as `***` here, keep typing then press `return`.
 	* If the script finished without `Permission denied`, then it means that `ghostrider` was added to your hostname list. 
@@ -58,7 +58,7 @@ I will use macOS screenshot to illustrate, all the commands are the same on all 
 		* Please Type yes and press enter.
 	* Then you will be asked for password, type in your password for accessing `ghostrider`. 
 	* Now, you are logged into `ghostrider` via `ssh`. Your terminal will look very similar to this:
-		![](pic/mac3.png width=800)
+		![](pic/mac3.png)
 	*  Don’t close this window, we will proceed to the next step.   
 		  
 
