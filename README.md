@@ -1,7 +1,7 @@
 # SSH Access Setup Guides
 ###### Yi Ru, March 15, 2019
 
-## Contents
+## Table of Contents
 * [Introduction](#introduction)
 * [Installation](#installation)
 	* [Step 1: Client Side](#step-1-client-side)
@@ -14,9 +14,9 @@
 * [Extra: share drive on ghostrider](#extra-share-drive-on-ghostrider)
 
 ## Introduction
-Lambda workstation (`ghostrider`) provides an efficient and high-performance solution for running deep learning code. It is also provides a Remote Desktop Protocol (RDP) for an easy-to-use remote access. However, using RDP will consume many CPU/GPU and RAM resources on `ghostrider`. Besides, if your connection with `ghostrider` is via Clark VPN, the response from ghostrider sometimes will be very “laggy” or even have no response at all. So, using Secure Shell (`ssh`) could be an ideal way to access `ghostrider` remotely. `ssh` can let you control the machine not only save computing resources, but also avoid the “laggy” situations. 
+Clark Labs now offers a high-performance computer—Lambda workstation (`ghostrider`)—for every coding guys. It provides four extremely fast GPUs to run your deep learning scripts and have it done in seconds. It also provides a Remote Desktop Protocol (RDP) for an easy-to-use remote access. However, using RDP will consume many CPU/GPU and RAM resources of `ghostrider`. Besides, if your connection with `ghostrider` is via Clark VPN, the response from ghostrider sometimes will be very “laggy” or even have no response at all. However, a Secure Shell (`ssh`) connection can not only let you control the machine in a command-line style without consuming too many computing resources, but also avoid the “laggy” situations. Therefore, using `ssh` could be an ideal way to access `ghostrider` remotely. 
 
-`ssh` is a secure connection to server’s shell. It provides a command line control interface (the shell) to the server (i.e. `ghostrider`). There is no GUI at all, only command lines. And that’s the reason why using SSH can save our valuable computing resources. 
+`ssh` provides a secure channel over an unsecured network in a client–server architecture, connecting an SSH client application with an SSH server[<sup> 1</sup>](#reference). In other words, it provides a command-line interface on your computer, but controlling the server (the `ghostrider`). There is no GUI at all, only command lines. Thus, the `ghostrider` won't provide you a desktop environment and it won't run any process related to it. And that’s the reason why using SSH can save our valuable computing resources. 
 
 This manual will guide you through the SSH access installation with only a few steps. After setting everything up, you can use Jupyter Notebook on your own device, but running your code on `ghostrider`. (*Even if Jupyter Notebook is not installed on your device!*)
 Now let’s get started.
@@ -62,7 +62,7 @@ Now the `ghostrider` is added to your hosts list, we can connect it with its hos
 
 #### Connect to ghostrider
 * After opening your Terminal/PowerShell, type:
-	```js
+	```bash
 	ssh <username>@ghostrider
 	```
 	* Change `<username>` to your username on ghostrider, then press enter.
@@ -94,3 +94,6 @@ python3 ./run.pyc
 You might notice that the ghostrider has a share drive function just like how you access `\\sandy`. And yes, after this setup you can access it or map this network drive to your computer simply with `\\ghostrider` or `\\ghostrider\home on Lambda`. (For Mac and Linux is `smb://ghostrider`, `smb://ghostrider/home on Lambda`)
 
 Noted that you will have permission to Read & Write **ONLY** to your own folder and `share` folder. You can read others folder but you don’t have permission to write.
+
+## Reference
+1. Wikipedia contributors, "Secure Shell," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Secure_Shell&oldid=886859004 (accessed March 18, 2019). 
