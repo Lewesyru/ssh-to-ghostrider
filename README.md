@@ -2,16 +2,16 @@
 ###### Yi Ru, March 15, 2019
 
 ## Contents
-* [Introduction](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#introduction)
-* [Installation](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#installation)
-	* [Step 1: Client Side](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#step-1-client-side)
-		* [For Windows](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#for-windows)
-		* [For Mac](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#for-mac)
-		* [For Linux](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#for-linux)
-	* [Step 2: Server Side](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#step-2-server-side)
-		* [Connect to ghostrider](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#connect-to-ghostrider)
-		* [Setup Jupyter Notebook for remote access](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#setup-jupyter-notebook-for-remote-access)
-* [Extra: share drive on ghostrider](https://github.com/Lewesyru/ssh-to-ghostrider/blob/master/README.md#extra-share-drive-on-ghostrider)
+* [Introduction](#introduction)
+* [Installation](#installation)
+	* [Step 1: Client Side](#step-1-client-side)
+		* [For Windows](#for-windows)
+		* [For Mac](#for-mac)
+		* [For Linux](#for-linux)
+	* [Step 2: Server Side](#step-2-server-side)
+		* [Connect to ghostrider](#connect-to-ghostrider)
+		* [Setup Jupyter Notebook for remote access](#setup-jupyter-notebook-for-remote-access)
+* [Extra: share drive on ghostrider](#extra-share-drive-on-ghostrider)
 
 ## Introduction
 Lambda workstation (`ghostrider`) provides an efficient and high-performance solution for running deep learning code. It is also provides a Remote Desktop Protocol (RDP) for an easy-to-use remote access. However, using RDP will consume many CPU/GPU and RAM resources on `ghostrider`. Besides, if your connection with `ghostrider` is via Clark VPN, the response from ghostrider sometimes will be very “laggy” or even have no response at all. So, using Secure Shell (`ssh`) could be an ideal way to access `ghostrider` remotely. `ssh` can let you control the machine not only save computing resources, but also avoid the “laggy” situations. 
