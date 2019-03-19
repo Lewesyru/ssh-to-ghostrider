@@ -23,7 +23,7 @@ Now let’s get started.
 
 ## Installation
 ### Step 1: Client Side
-The first step is add `ghostrider` to your hostname list on your computer. **This operation is requiring administrator access or sudo permission**. However, you can skip this step if you prefer using IP address to connect, or you don’t have the permission to modify system file. 
+The first step is add `ghostrider` to your hostname list on your computer. **This operation requires administrator access or sudo permission**. However, you can skip this step if you prefer using IP address to connect, or you don’t have the permission to modify system file. 
 
 The configuration file is saved on `ghostrider: /home/share` folder. All the operations require your device to be connected to the Clark network. (i.e., connected to Clark WiFi or Clark VPN)
 
