@@ -32,8 +32,8 @@ The configuration file is saved on `ghostrider: /home/share` folder. All the ope
 	![](pic/1.png)
 
 * A window will pop-up asking for your credentials. Now type your username and password on `ghostrider`. 
-* You will see a Folder name `home on Lambda`, open it and navigate to `share` folder.
-* Open `Windows` folder in `share`, right click on `setup.bat` and select `Run as administrator`. Click Yes when UAC window prompt.
+* You will see a Folder name `home on Lambda`, open it and navigate to `share\ssh` folder.
+* Open `Windows` folder in `share\ssh`, right click on `setup.bat` and select `Run as administrator`. Click Yes when UAC window prompt.
 	![](pic/2.png)
 * If the script finished without `Access is denied.`, then it means that `ghostrider` was added to your hostname list.   	  
 
@@ -41,8 +41,8 @@ The configuration file is saved on `ghostrider: /home/share` folder. All the ope
 * Open a Finder window, press `⌘ + K` and type `smb://140.232.230.73` in Server Address. 
 	![](pic/mac1.png)
 * Then type in your credentials for `ghostrider`. If it prompts you to select volumes, select`home on Lambda` and click OK.
-* Navigate to `home on Lambda/share/Mac&Linux`, and you will see a executable file named `setup`.
-* Open a terminal window, type in`sudo ` (’sudo’ and a space), then drag the setup file into the terminal, then it will show up like this:
+* Navigate to `home on Lambda/share/ssh/Mac&Linux`, and you will see a executable file named `setup`.
+* Open a terminal window, type in`sudo ` (’sudo’ with a space), then drag the setup file into the terminal, then it will show up like this:
 	![](pic/mac2.png)
 
 * Hit `return`, when it prompts you for password, type the password you used to login your Mac. Noted that your password will NOT show up as `***` here, keep typing then press `return`.
@@ -83,7 +83,7 @@ Now the `ghostrider` is added to your hosts list, we can connect it with its hos
 #### Setup Jupyter Notebook for remote access
 * Now type the following command to run the Jupyter configuration file:
 ```bash
-cd ~/../share
+cd ~/../share/ssh
 python3 ./run.pyc
 ```
 * Please follow the instructions to go through the setup. You will be asked to select a port number. When finished, your Jupyter Notebook should be good to go.
@@ -93,7 +93,7 @@ python3 ./run.pyc
 ## Extra: share drive on ghostrider
 You might notice that the ghostrider has a share drive function just like how you access `\\sandy`. And yes, after this setup you can access it or map this network drive to your computer simply with `\\ghostrider` or `\\ghostrider\home on Lambda`. (For Mac and Linux is `smb://ghostrider`, `smb://ghostrider/home on Lambda`)
 
-Noted that you will have permission to Read & Write **ONLY** to your own folder and `share` folder. You can read others folder but you don’t have permission to write.
+Noted that you will have permission to Read & Write **ONLY** to your own folder and `share` folder. You can read others folder but you don’t have permission to write, modify or delete.
 
 ## Reference
 1. Wikipedia contributors, "Secure Shell," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Secure_Shell&oldid=886859004 (accessed March 18, 2019). 
