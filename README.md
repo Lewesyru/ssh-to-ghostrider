@@ -23,7 +23,7 @@ Now let’s get started.
 
 ## Installation
 ### Step 1: Client Side
-The first step is add `ghostrider` to your hostname list on your computer. **This operation requires administrator access or sudo permission**. However, you can skip this step if you prefer using IP address to connect, or you don’t have the permission to modify system file. 
+The first step is add `ghostrider` to your hostname list on your computer. **This operation requires administrator access or sudo permission**. However, you can skip this step if you don’t have the permission to modify system file, or if you prefer using IP address to connect. 
 
 The configuration file is available in the [Release Page](https://github.com/Lewesyru/ssh-to-ghostrider/releases). Please download the latest version then unzip it.
 
