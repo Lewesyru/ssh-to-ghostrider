@@ -32,6 +32,7 @@ The configuration file is available in the [Release Page](https://github.com/Lew
 
 #### For Windows:
 * Open `Windows` folder, right click on `setup.bat` and select `Run as administrator`. Click Yes when UAC window prompt.
+
 	![](pic/2.png)
 * If the script finished without `Access is denied.`, then it means that `ghostrider` was added to your hostname list.   	  
 
