@@ -1,4 +1,4 @@
-# SSH Access Setup Guides
+# SSH to Ghostrider Setup Guide
 ###### Yi Ru, April 25, 2019
 
 
