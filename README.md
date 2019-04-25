@@ -1,5 +1,8 @@
 # SSH Access Setup Guides
-###### Yi Ru, March 15, 2019
+###### Yi Ru, April 25, 2019
+
+
+If you have any questions or problems, please post it to the [Issues Page](https://github.com/Lewesyru/ssh-to-ghostrider/issues).
 
 ## Table of Contents
 * [Introduction](#introduction)
