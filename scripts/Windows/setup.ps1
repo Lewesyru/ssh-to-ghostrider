@@ -1,5 +1,5 @@
-# This script is for backup purpose only.
-# Do not use it.
+# This script is still in testing.
+# Do not use this one.
 
 Write-Host "Script created by Yi Ru.`n"
 Write-Host "Start writing file...`n"
