@@ -1,6 +1,7 @@
 # SSH to Ghostrider Setup Guide
 ###### Yi Ru, April 25, 2019
 
+#### Note: This repository will no longer be maintained since I've already left Clark Lab years ago. 
 
 If you have any questions or problems, please post it to the [Issues Page](https://github.com/Lewesyru/ssh-to-ghostrider/issues).
 
